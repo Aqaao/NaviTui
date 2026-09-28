@@ -476,10 +476,22 @@ stay open (see [License](#license)).
 
 ---
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=gheat1%2Fnavitui&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=gheat1/navitui&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=gheat1/navitui&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=gheat1/navitui&type=date&legend=top-left" />
+ </picture>
+</a>
+
 ## The suite
 
 - [**ricekit**](https://github.com/Gheat1/ricekit) — the Textual design system NaviTui is built on
-- [**ltui**](https://github.com/Gheat1/ltui) — a fast, beautiful TUI for Linear, where ricekit came from
+- [**ltui**](https://github.com/runpantheon/ltui) — a fast, beautiful TUI for Linear, where ricekit came from
+
+---
 
 ---
 

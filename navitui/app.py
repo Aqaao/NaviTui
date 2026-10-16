@@ -912,10 +912,22 @@ class NaviTuiApp(KitApp):
     async def _start_mpris(self) -> None:
         # dbus-fast runs on our own event loop, so media-key controls can
         # call app actions directly — no thread marshalling
+
+        def _external_play() -> None:
+            if self.player.active:
+                self.player.set_paused(False)
+                self._announce()
+            else:
+                self.action_play_pause()
+
+        def _external_pause() -> None:
+            self.player.set_paused(True)
+            self._announce()
+
         controls = {
             "play_pause": self.action_play_pause,
-            "play": lambda: (self.player.set_paused(False) if self.player.active else self.action_play_pause()),
-            "pause": lambda: self.player.set_paused(True),
+            "play": _external_play,
+            "pause": _external_pause,
             "stop": self._external_stop,
             "next": self.action_next_track,
             "prev": self.action_prev_track,
